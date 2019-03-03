@@ -46,6 +46,7 @@ img{
 }
 /* CSS Reset end */
 
+
 .wrapper{
 
 	max-width: 1000px;
@@ -61,18 +62,17 @@ img{
 	}
 }
 
+.clearfix::after{
+
+	display: block;
+	clear: both;
+	content: '';
+}
+
 .social-icon{
 
 	padding: 10px;
-    background-color: #f6f6f6;
-}
-
-
-.clearfix::after{
-
-	content: '';
-	display: block;
-	clear: both;
+	background-color: #f6f6f6;
 }
 
 .social-icon ul{
@@ -80,57 +80,54 @@ img{
 	float: right;
 }
 
-
-.social-icon ul li{
+.social-icon li{
 
 	float: left;
-	margin-left: 10px;
 }
 
-.social-icon ul li a{
+.social-icon li a{
 
 	display: block;
-	width: 100%;
-	height: 100%;
+	margin-left: 10px;
+	text-decoration: none;
+
 }
 
 .fb a{
 
 	color: #4460a0;
-    text-decoration: none;
 }
 
 .twitter a{
 
-    color: #00aaec;
-    text-decoration: none;
+	color: #00aaec;
 }
+
 
 .header{
 
-	padding: 10px 0;
 	box-shadow: 0px 2px 0.5px #5555;
+	padding: 10px;
 }
+
 
 
 .logo{
 
-	margin-left: 10px;
-	background: url(../images/logo.png)no-repeat;
+	background: url('../images/logo.png')no-repeat;
 	width: 170px;
 	height: 36px;
-	text-indent: 101%;
+	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 	display: inline-block;
-
 }
 
 .logo a{
 
 	display: block;
 	width: 100%;
-	height: 36px;
+	height: 100%;
 }
 
 
@@ -139,7 +136,6 @@ img{
 	float: right;
 
 }
-
 
 .menu li{
 
@@ -151,8 +147,8 @@ img{
 	padding: 20px;
 	line-height: 30px;
 	border-bottom: 5px solid transparent;
-	color: #00cc99;
 	text-decoration: none;
+	color: #00cc99;	
 }
 
 
@@ -161,14 +157,8 @@ img{
 	border-bottom: 5px solid #00cc99;
 }
 
+
 @media(max-width: 767px){
-
-	
-	.header{
-
-		width: 100%;
-		height: auto;
-	}
 
 	.menu{
 
@@ -183,68 +173,96 @@ img{
 	.menu li a{
 
 		display: block;
-		text-align: center;
-		padding: 10px;
 		width: 50%;
 		margin: 0 auto;
-	}
+		text-align: center;
+}
+
+}
+
+.content{
+
 
 
 }
+
 
 
 .content ul li{
 
 	float: left;
 	width: 31.33333%;
-	margin-top: 30px;
-	margin-left: 1%;
-	margin-right: 1%;
+	height: 330px;
+	margin: 30px 1%;
 	padding: 2%;
 	box-shadow: 0px 2px 4px #5555;
 	border-radius: 4px;
-	height: 330px;
 	line-height: 20px;
 }
 
-.content img{
+
+
+.content img {
 
 	display: block;
 	margin: 0 auto;
 }
 
-.content ul li h2{
+.content  h2{
 
 	text-align: center;
-	color: #000000;
+	padding: 10px;
 	font-size: 20px;
-	padding: 5px 0;
+	color: #000000;
+
 }
+
 
 .content .course li{
 
 	float: none;
-	list-style: disc;
-	margin: 0;
+	box-shadow: none;
 	width: auto;
 	height: auto;
-	box-shadow: none;
-	padding: 0;
+	margin: 0;
+	padding: 1%;
+	list-style: disc;
 	margin-left: 20px;
+	line-height: 15px;
 }
 
 
-@media (max-width: 767px){
+@media(max-width: 767px){
+
 
 	.content ul li{
+
 		float: none;
 		width: 60%;
-		height: auto;
 		margin: 10px auto;
 		padding: 3% 5%;
+		height: auto;
+
 	}
 
 
+	.content .course li{
+
+		float: none;
+		width: 60%;
+		margin: 0 auto;
+		height: auto;
+
+    	}
+
+    .content  h3{
+
+    	display: block;
+    	width: 60%;
+    	margin: 0 auto;
+    	height: auto;
+    	
+    }
 
 
 }
